@@ -15,6 +15,8 @@ const server = http.createServer((req, res) => {
     // end the response. This is required, otherwise the request will hang.
     // Even if you don't write anything to the response, you still need to end it.
     res.end();
+    // could have also just done this:
+    // res.end('Hello World!'); which replaces res.write
 });
 
 const PORT = process.env.PORT || 3000;
