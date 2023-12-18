@@ -69,6 +69,8 @@ app.get('/friends/:friendId', (req, res) => {
     }
 });
 
+// notice how much cleaner and more resiliant this is compared to the previous example in basic_http_server/parameterised_urls.cjs
+
 
 app.listen(PORT, () => {
     console.log(`Server is listening on port ${PORT}...`);
