@@ -5,7 +5,7 @@ const express = require('express');
 
 // NEW. Import the router
 const friendsRouter = require('./routes/friends.router.js');
-//const messagesRouter = require('./routes/messages.router.js');
+const messagesRouter = require('./routes/messages.router.js');
 
 const app = express();
 
@@ -24,6 +24,7 @@ app.get('/friends/:friendId', friendsController.getFriend);
 // New Way
 app.use('/friends', friendsRouter); // mount the router
 
+app.use('/messages', messagesRouter); // mount the router
 
 app.listen(PORT, () => {
     console.log(`Server is listening on port ${PORT}...`);

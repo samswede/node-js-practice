@@ -1,16 +1,21 @@
+const path = require('path');
+
+
 function getMessages(req, res) {
-    res.json(messages);
+    const filePath = path.join(__dirname, '..', 'public', 'some_image.jpg');
+    res.sendFile(filePath); // NEW
 };
 
+/*
 function postMessage(req, res) {
 
 }
-
+*/
 // below is Common JS notation for exporting modules
 
 module.exports = {
     getMessages,
-    postMessage
+    //postMessage
 };
 
 
